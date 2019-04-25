@@ -258,7 +258,7 @@ func (tag *OrmTag) String() string {
 		return ""
 	}
 	if tag.Comment != "" {
-		return fmt.Sprintf("`orm:\"%s\" description:\"%s\"`", strings.Join(ormOptions, ";"), tag.Comment)
+		return fmt.Sprintf("`orm:\"%s;description:(%s)\"`", strings.Join(ormOptions, ";"), tag.Comment)
 	}
 	return fmt.Sprintf("`orm:\"%s\"`", strings.Join(ormOptions, ";"))
 }
